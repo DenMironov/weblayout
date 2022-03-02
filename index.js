@@ -1,8 +1,62 @@
 document.querySelector('.header__burger-btn').addEventListener('click', function () {
   document.querySelector('.header__burger-btn').classList.toggle('is-active')
-  document.querySelector('.header__menu').classList.toggle('is-active')
+  document.querySelector('.header__nav').classList.toggle('is-active')
   document.querySelector('body').classList.toggle('lock')
-})
+});
+
+function setSearch(params) {
+  const openBtn = document.querySelector(`.${params.openBtnClass}`);
+  const search = document.querySelector(`.${params.searchClass}`);
+  const closeBtn = search.querySelector(`.${params.closeBtnClass}`);
+
+  search.addEventListener("animationend", function (evt) {
+    if (this._isOpened) {
+      this.classList.remove(params.activeClass);
+      this.classList.remove(params.hiddenClass);
+      this._isOpened = false;
+    } else {
+      this._isOpened = true;
+    }
+  });
+  
+  search.addEventListener('click', function(evt) {
+    evt._isSearch = true;
+  });
+
+  openBtn.addEventListener("click", function (evt) {
+    this.disabled = true;
+    this.style.opacity = 0;
+
+    if (
+      !search.classList.contains(params.activeClass) &&
+      !search.classList.contains(params.hiddenClass)
+    ) {
+      search.classList.add(params.activeClass);
+    }
+  });
+  
+  closeBtn.addEventListener('click', function () {
+    openBtn.disabled = false;
+    openBtn.style.opacity = '';
+    search.classList.add(params.hiddenClass);
+  });
+  
+  document.body.addEventListener('click', function (evt) {
+    if (!evt._isSearch && search._isOpened) {
+      openBtn.disabled = false;
+      openBtn.style.opacity = '';
+      search.classList.add(params.hiddenClass);
+    }
+  });
+}
+
+setSearch({
+  openBtnClass: "js-open-search", // класс кнопки открытия
+  closeBtnClass: "js-close-search", // класс кнопки закрытия
+  searchClass: "js-form", // класс формы поиска
+  activeClass: "is-opened", // класс открытого состояния
+  hiddenClass: "is-closed" // класс закрывающегося состояния (удаляется сразу после закрытия)
+});
 
 //NAV-LINK
 
@@ -23,25 +77,9 @@ document.querySelectorAll('.js-scroll-link').forEach(link => {
 
 //HERO
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
+const swiper = new Swiper('.top-swiper', {
+
   loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    hide: true
-  },
-
-  // Navigation arrows
-  navigation: {
-    hide: true,
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    hide: true,
-  },
 
   allowTouchMove: false,
   effect: 'fade',
@@ -101,10 +139,9 @@ function setMenuListener() {
 
 const element = document.querySelector('#selectGallery');
 const choises = new Choices(element, {
-  searchEnabled: true,
+  searchEnabled: false,
   placeholder: false,
-  placeholderValue: 'f22222222222222',
-  searchPlaceholderValue: 'Рисунок'
+
 });
 
 let gallerySlider = new Swiper(".slides-container", {
@@ -120,20 +157,13 @@ let gallerySlider = new Swiper(".slides-container", {
   },
   navigation: {
     nextEl: ".gallery-next",
-    prevEl: ".gallery-prev"
+    prevEl: ".gallery-prev",
+    disabledClass: "nav-btn--disabled",
   },
 
   breakpoints: {
-    321: {
-      slidesPerGroup: 3,
-      slidesPerView: 2,
-      grid: {
-        rows: 2
-      },
-      spaceBetween: 15
-    },
 
-    649: {
+    421: {
       slidesPerGroup: 3,
       slidesPerView: 2,
       grid: {
@@ -142,16 +172,25 @@ let gallerySlider = new Swiper(".slides-container", {
       spaceBetween: 34
     },
 
-    1025: {
+    971: {
+      slidesPerGroup: 3,
+      slidesPerView: 2,
+      grid: {
+        rows: 2
+      },
+      spaceBetween: 34
+    },
+
+    1281: {
       slidesPerGroup: 3,
       slidesPerView: 3,
       grid: {
         rows: 2
       },
-      spaceBetween: 20
+      spaceBetween: 34
     },
 
-    1809: {
+    1601: {
       slidesPerGroup: 3,
       slidesPerView: 3,
       grid: {
@@ -213,14 +252,16 @@ $(function () {
 });
 
 //EDITIONS//
-
+(() => {
 document.querySelector('.editions__checkbox-btn').addEventListener('click', function () {
   document.querySelector('.editions__checkbox-btn').classList.toggle('is-active')
-  document.querySelector('.editions__checkbox').classList.toggle('is-active')
-})
+  document.querySelector('.editions__checkbox').classList.toggle('is-active');
+});
+})();
 
-
-const MOBILE_WIDTH = 320;
+document.addEventListener('DOMContentLoaded', () => {
+  (() => {
+const MOBILE_WIDTH = 420;
 
 const sliderParamsNotMobile = {
   sliderWrap: "editions__slider-wrap",
@@ -271,27 +312,27 @@ function activateSlider(params) {
 
   params.cardsSlider = new Swiper(`.${params.cardsContainerName}`, {
     breakpoints: {
-      321: {
+      421: {
         slidesPerGroup: 2,
         slidesPerView: 2,
         spaceBetween: 30,
       },
-      649: {
+      610: {
         slidesPerGroup: 2,
         slidesPerView: 2,
         spaceBetween: 7,
       },
-      769: {
+      970: {
         slidesPerGroup: 2,
         slidesPerView: 2,
         spaceBetween: 49,
       },
-      1025: {
+      1281: {
         slidesPerGroup: 3,
         slidesPerView: 3,
         spaceBetween: 20
       },
-      1808: {
+      1601: {
         slidesPerGroup: 3,
         slidesPerView: 3,
         spaceBetween: 50
@@ -306,7 +347,8 @@ function activateSlider(params) {
 
     navigation: {
       nextEl: `.${params.navNext}`,
-      prevEl: `.${params.navPrev}`
+      prevEl: `.${params.navPrev}`,
+      disabledClass: "nav-btn--disabled",
     },
 
     on: {
@@ -361,12 +403,14 @@ checkWindowWidth(sliderParamsNotMobile);
 window.addEventListener("resize", function () {
   checkWindowWidth(sliderParamsNotMobile);
 });
+})();
+});
 
 //DEVELOPMENTS//
 
 (() => {
-  const MOBILE_WIDTH = 320;
-  const DESKTOP_WIDTH = 961;
+  const MOBILE_WIDTH = 420;
+  const DESKTOP_WIDTH = 1024;
   const btn = document.querySelector(".developments__btn");
 
   const sliderMobileParams = {
@@ -504,8 +548,8 @@ const project__swiper = new Swiper('.project__swiper', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.project__navigation-next',
+    prevEl: '.project__navigation-prev',
   },
 
   // And if we need scrollbar
@@ -513,30 +557,23 @@ const project__swiper = new Swiper('.project__swiper', {
     hide: true,
   },
   breakpoints: {
-    321: {
-      slidesPerGroup: 1,
-      slidesPerView: 1,
-    },
-    649: {
+ 
+    611: {
       slidesPerGroup: 1,
       slidesPerView: 2,
       spaceBetween: 34,
     },
-    769: {
+    971: {
       slidesPerGroup: 2,
       slidesPerView: 2,
       spaceBetween: 50,
     },
-    1025: {
+    1281: {
       slidesPerGroup: 3,
       slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 50,
     },
-    1809: {
-      slidesPerGroup: 3,
-      slidesPerView: 3,
-      spaceBetween: 45,
-    },
+
   },
 });
 
@@ -572,6 +609,17 @@ new JustValidate('.contacts__form', {
       email: true
     },
   },
+
+  messages: {
+    tel: {
+      required: "Поле обязательно для заполнения",
+    },
+    name: {
+      required: "Поле обязательно для заполнения",
+      minLength: "Минимальное количество символов 2",
+      maxLength: "Максимальное количество символов 10",
+    },
+  },
 });
 
 ymaps.ready(init);
@@ -591,11 +639,11 @@ function init() {
     {
       suppressMapOpenBlock: true,
       geolocationControlSize: "large",
-      geolocationControlPosition: { top: "340px", right: "20px" },
+      geolocationControlPosition: { top: "270px", right: "20px" },
       geolocationControlFloat: 'none',
       zoomControlSize: "small",
       zoomControlFloat: "none",
-      zoomControlPosition: { top: "265px", right: "20px" }
+      zoomControlPosition: { top: "195px", right: "20px" }
     },
   );
 
