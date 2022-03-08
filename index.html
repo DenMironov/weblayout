@@ -108,7 +108,7 @@
                                         fill="white" />
                                 </svg>
                             </button>
-                            <button class="header__search-btn-close js-close-search">
+                            <button class="header__search-btn-close js-close-search" type="button">
                                 <svg class="header__search-close-icon" width="23" height="23" viewBox="0 0 29 29"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.63635" width="37.2838" height="3.72838" transform="rotate(45 2.63635 0)"
@@ -753,55 +753,116 @@
                     <div class="developments__slider">
                         <div class="developments__list">
                             <div class="developments__item">
-                                <img src="img/developments-one.jpg" class="developments__item-img"
-                                    alt="Книжная гравюра">
-                                <p class="developments__item-adress">Музей им. Щусева<br>с 20 марта по 30 апреля</p>
-                                <h3 class="developments__item-title">Книжная гравюра в живом восприятии</h3>
-                                <p class="developments__item-text">Один из ведущих флорентийских художников
-                                    Кватроченто, основатель художественной династии, которую продолжили его брат
-                                    Давид и сын Ридольфо.</p>
-                                <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                <picture>
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-320.jpg"
+                                        media="(max-width: 610px)">
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        media="(max-width: 970px)">
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        media="(max-width: 1024px)">
+                                    <img src="img/developments-one.jpg" class="developments__item-img" alt="Книжная гравюра">
+                                </picture>
+                                    <div class="developments__item-content">
+                                        <p class="developments__item-adress">Музей им. Щусева<br>с 20 марта по 30 апреля</p>
+                                        <h3 class="developments__item-title">Книжная гравюра в живом восприятии</h3>
+                                        <p class="developments__item-text">Один из ведущих флорентийских художников
+                                            Кватроченто, основатель художественной династии, которую продолжили его брат
+                                            Давид и сын Ридольфо.</p>
+                                        <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                    </div>
                             </div>
                             <div class="developments__item">
-                                <img src="img/developments-two.jpg" class="developments__item-img"
-                                    alt="Открытая дискуссия">
-                                <p class="developments__item-adress">ММОМА<br>24 марта 19:00</p>
-                                <h3 class="developments__item-title">«Открытая дискуссия». Дмитрий Петров и Сергей
-                                    Ильин.</h3>
-                                <p class="developments__item-text">Высокий уровень вовлечения представителей целевой
-                                    аудитории является четким доказательством простого факта.</p>
-                                <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                <picture>
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-320.jpg"
+                                        media="(max-width: 610px)">
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        media="(max-width: 970px)">
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        media="(max-width: 1024px)">
+                                    <img src="img/developments-two.jpg" class="developments__item-img" alt="«Открытая дискуссия»">
+                                </picture>
+                                    <div class="developments__item-content">
+                                        <p class="developments__item-adress">ММОМА<br>24 марта 19:00</p>
+                                        <h3 class="developments__item-title">«Открытая дискуссия». Дмитрий Петров и Сергей
+                                            Ильин.</h3>
+                                        <p class="developments__item-text">Высокий уровень вовлечения представителей целевой
+                                            аудитории является четким доказательством простого факта.</p>
+                                        <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                    </div>
                             </div>
                             <div class="developments__item">
-                                <img src="img/developments-three.jpg" class="developments__item-img" alt="Выставка">
-                                <p class="developments__item-adress">Еврейский музей<br>с 31 марта по 21 апреля</p>
-                                <h3 class="developments__item-title">Выставка «Формация 2020»</h3>
-                                <p class="developments__item-text">Идейные соображения высшего порядка, а также
-                                    современная методология разработки играет важную роль в формировании
-                                    глубокомысленных рассуждений.</p>
-                                <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                <picture>
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-320.jpg"
+                                        media="(max-width: 610px)">
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        media="(max-width: 970px)">
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        media="(max-width: 1024px)">
+                                    <img src="img/developments-three.jpg" class="developments__item-img" alt="Выставка «Формация 2020»">
+                                </picture>
+                                <div class="developments__item-content">
+                                    <p class="developments__item-adress">Еврейский музей<br>с 31 марта по 21 апреля</p>
+                                    <h3 class="developments__item-title">Выставка «Формация 2020»</h3>
+                                    <p class="developments__item-text">Идейные соображения высшего порядка, а также
+                                        современная методология разработки играет важную роль в формировании
+                                        глубокомысленных рассуждений.</p>
+                                    <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                </div>
                             </div>
                             <div class="developments__item">
-                                <img src="img/developments-four.jpg" class="developments__item-img"
-                                    alt="Молодое искусство">
-                                <p class="developments__item-adress">Третьяковка на Крымском валу<br>с 30 марта по
-                                    30 апреля</p>
-                                <h3 class="developments__item-title">XXIV Международная биеннале молодого искусства
-                                </h3>
-                                <p class="developments__item-text">Внезапно, реплицированные с зарубежных
-                                    источников, современные исследования.</p>
-                                <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                <picture>
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-320.jpg"
+                                        media="(max-width: 610px)">
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        media="(max-width: 970px)">
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        media="(max-width: 1024px)">
+                                    <img src="img/developments-four.jpg" class="developments__item-img" alt="Молодое искусство">
+                                </picture>
+                                    <div class="developments__item-content">
+                                        <p class="developments__item-adress">Третьяковка на Крымском валу<br>с 30 марта по
+                                            30 апреля</p>
+                                        <h3 class="developments__item-title">XXIV Международная биеннале молодого искусства
+                                        </h3>
+                                        <p class="developments__item-text">Внезапно, реплицированные с зарубежных
+                                            источников, современные исследования.</p>
+                                        <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                    </div>
                             </div>
                             <div class="developments__item">
-                                <img src="img/developments-five.jpg" class="developments__item-img"
-                                    alt="Метафора серебра">
-                                <p class="developments__item-adress">ММАМ<br>с 8 апреля по 20 мая</p>
-                                <h3 class="developments__item-title">Джон Винзор. Фотографии из серии «Метафора
-                                    серебра»</h3>
-                                <p class="developments__item-text">Один из ведущих флорентийских художников
-                                    Кватроченто, основатель художественной династии, которую продолжили его брат
-                                    Давид и сын Ридольфо.</p>
-                                <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                <picture>
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-320.jpg"
+                                        media="(max-width: 610px)">
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        media="(max-width: 970px)">
+                                    <source
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        media="(max-width: 1024px)">
+                                    <img src="img/developments-five.jpg" class="developments__item-img" alt="Метафора серебра">
+                                </picture>
+                                    <div class="developments__item-content">
+                                        <p class="developments__item-adress">ММАМ<br>с 8 апреля по 20 мая</p>
+                                        <h3 class="developments__item-title">Джон Винзор. Фотографии из серии «Метафора
+                                            серебра»</h3>
+                                        <p class="developments__item-text">Один из ведущих флорентийских художников
+                                            Кватроченто, основатель художественной династии, которую продолжили его брат
+                                            Давид и сын Ридольфо.</p>
+                                        <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -1021,13 +1082,13 @@
                     однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые
                     государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего
                     возрастает их статус бесполезности. Прежде всего, постоянное
-                    информационно-пропагандистское <button class="project__text-btn js-tooltip" aria-label="tooltip"
+                    информационно-пропагандистское <button class="projects__text-btn js-tooltip" aria-label="tooltip"
                         data-tippy-content="Пример современных тенденций - современная методология разработки">i</button>
                     обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности
                     принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть
-                    рассмотрены <button class="project__text-btn js-tooltip" aria-label="tooltip"
+                    рассмотрены <button class="projects__text-btn js-tooltip" aria-label="tooltip"
                         data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции">i</button>
-                    исключительно в разрезе маркетинговых и финансовых <button class="project__text-btn js-tooltip"
+                    исключительно в разрезе маркетинговых и финансовых <button class="projects__text-btn js-tooltip"
                         aria-label="tooltip" data-tippy-content="В стремлении повысить качество">i</button>
                     предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных
                     резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не
@@ -1035,41 +1096,41 @@
                     <a href="#" class="projects__text-link">blanchard-&nbsp;art.ru/projects/about</a>
                 </p>
                 <h3 class="projects__title-partners">Партнёры проектов:</h3>
-                <div class="project__swiper-container">
-                    <button class="project__navigation-btn project__navigation-prev"
+                <div class="projects__swiper-container">
+                    <button class="projects__navigation-btn projects__navigation-prev"
                         aria-label="К предыдущему слайду"></button>
-                    <div class="project__swiper">
+                    <div class="projects__swiper">
                         <div class="swiper-wrapper">
-                            <a href="#" class="swiper-slide project__item-link">
-                                <img class="project__item-img" src="img/partner-freelands.png" alt="">
+                            <a href="#" class="swiper-slide projects__item-link">
+                                <img class="projects__item-img" src="img/partner-freelands.png" alt="">
                             </a>
-                            <a href="#" class="swiper-slide project__item-link">
-                                <img class="project__item-img" src="img/partner-institute.png" alt="">
+                            <a href="#" class="swiper-slide projects__item-link">
+                                <img class="projects__item-img" src="img/partner-institute.png" alt="">
                             </a>
-                            <a href="#" class="swiper-slide project__item-link">
-                                <img class="project__item-img" src="img/partner-workhouse.png" alt="">
+                            <a href="#" class="swiper-slide projects__item-link">
+                                <img class="projects__item-img" src="img/partner-workhouse.png" alt="">
                             </a>
-                            <a href="#" class="swiper-slide project__item-link">
-                                <img class="project__item-img" src="img/partner-1849.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link">
+                                <img class="projects__item-img" src="img/partner-1849.png" alt="Партнёр">
                             </a>
-                            <a href="#" class="swiper-slide project__item-link">
-                                <img class="project__item-img" src="img/partner-hiscox.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link">
+                                <img class="projects__item-img" src="img/partner-hiscox.png" alt="Партнёр">
                             </a>
-                            <a href="#" class="swiper-slide project__item-link">
-                                <img class="project__item-img" src="img/partner-camden.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link">
+                                <img class="projects__item-img" src="img/partner-camden.png" alt="Партнёр">
                             </a>
-                            <a href="#" class="swiper-slide project__item-link">
-                                <img class="project__item-img" src="img/partner-stassen.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link">
+                                <img class="projects__item-img" src="img/partner-stassen.png" alt="Партнёр">
                             </a>
-                            <a href="#" class="swiper-slide project__item-link">
-                                <img class="project__item-img" src="img/partner-watts.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link">
+                                <img class="projects__item-img" src="img/partner-watts.png" alt="Партнёр">
                             </a>
-                            <a href="#" class="swiper-slide project__item-link">
-                                <img class="project__item-img" src="img/partner-esad.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link">
+                                <img class="projects__item-img" src="img/partner-esad.png" alt="Партнёр">
                             </a>
                         </div>
                     </div>
-                    <button class="project__navigation-btn project__navigation-next"
+                    <button class="projects__navigation-btn projects__navigation-next"
                         aria-label="К следующему слайду"></button>
                 </div>
             </div>
@@ -1082,7 +1143,7 @@
         <div class="contacts__container">
             <div class="contacts__left">
                 <h3 class="contacts__left-title">Шоурум №4</h3>
-                <span class="contacts__left-adress">Леонтьевский переулок, дом 5/1</span>
+                <p class="contacts__left-adress">Леонтьевский переулок, дом 5/1</p>
                 <form action="mail.php" enctype="multipart/form-data" method="POST" class="contacts__form">
                     <input type="hidden" name="admin_email[]" value="dspatm131@mail.ru">
                     <h3 class="contacts__form-title">Заказать обратный звонок</h3>
@@ -1094,7 +1155,7 @@
                         <button class="contacts__form-btn" aria-label="Заказать">Заказать</button>
                     </div>
                 </form>
-                <span class="contacts__descr">Связаться в один клик</span>
+                <p class="contacts__descr">Связаться в один клик</p>
                 <ul class="contacts__list">
                     <li class="contacts__item">
                         <a href="https://www.whatsapp.com/" aria-label="whatsapp" class="contacts__link">

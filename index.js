@@ -1,7 +1,14 @@
 document.querySelector('.header__burger-btn').addEventListener('click', function () {
   document.querySelector('.header__burger-btn').classList.toggle('is-active')
-  document.querySelector('.header__nav').classList.toggle('is-active')
+ document.querySelector('.header__nav').classList.toggle('is-active')
   document.querySelector('body').classList.toggle('lock')
+});
+
+document.querySelectorAll('.header__nav-link').forEach(function(headerNavLink) {
+  headerNavLink.addEventListener('click', function () {
+  document.querySelector('.header__nav').classList.remove('is-active')
+  document.querySelector('.header__burger-btn').classList.remove('is-active')
+});
 });
 
 function setSearch(params) {
@@ -18,6 +25,7 @@ function setSearch(params) {
       this._isOpened = true;
     }
   });
+
   
   search.addEventListener('click', function(evt) {
     evt._isSearch = true;
@@ -72,7 +80,7 @@ document.querySelectorAll('.js-scroll-link').forEach(link => {
       top: elementPosition,
       behavior: 'smooth'
     });
-  });
+   });
 });
 
 //HERO
@@ -317,12 +325,12 @@ function activateSlider(params) {
         slidesPerView: 2,
         spaceBetween: 30,
       },
-      610: {
+      641: {
         slidesPerGroup: 2,
         slidesPerView: 2,
         spaceBetween: 7,
       },
-      970: {
+      971: {
         slidesPerGroup: 2,
         slidesPerView: 2,
         spaceBetween: 49,
@@ -338,7 +346,6 @@ function activateSlider(params) {
         spaceBetween: 50
       },
     },
-
 
     pagination: {
       el: `.${params.sliderWrap} .${params.paginationClassName}`,
@@ -409,8 +416,8 @@ window.addEventListener("resize", function () {
 //DEVELOPMENTS//
 
 (() => {
-  const MOBILE_WIDTH = 420;
-  const DESKTOP_WIDTH = 1024;
+  const MOBILE_WIDTH = 640;
+  const DESKTOP_WIDTH = 970;
   const btn = document.querySelector(".developments__btn");
 
   const sliderMobileParams = {
@@ -536,20 +543,20 @@ window.addEventListener("resize", function () {
 
 //PROJECTS//
 
-const project__swiper = new Swiper('.project__swiper', {
+const project__swiper = new Swiper('.projects__swiper', {
   // Optional parameters
   loop: true,
 
 
   // If we need pagination
   pagination: {
-    el: '.project__swiper-pagination',
+    el: '.projects__swiper-pagination',
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: '.project__navigation-next',
-    prevEl: '.project__navigation-prev',
+    nextEl: '.projects__navigation-next',
+    prevEl: '.projects__navigation-prev',
   },
 
   // And if we need scrollbar
@@ -558,7 +565,7 @@ const project__swiper = new Swiper('.project__swiper', {
   },
   breakpoints: {
  
-    611: {
+    641: {
       slidesPerGroup: 1,
       slidesPerView: 2,
       spaceBetween: 34,
