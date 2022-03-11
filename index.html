@@ -35,7 +35,6 @@
                         <button class="header__burger-btn" aria-label="Меню">
                             <span></span>
                         </button>
-
                         <a tabindex="0" class="logo">
                             <img src="img/logo.svg" alt="Blanchard" class="logo-img">
                         </a>
@@ -84,7 +83,7 @@
                                 </a>
                             </div>
                         </nav>
-                        <button class="header__search-btn js-open-search" type="button">
+                        <button class="header__search-btn js-open-search" type="button" aria-label="Поиск">
                             <svg class="header__search-icon" width="23" height="22" viewBox="0 0 23 22" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect width="6.8678" height="1.71695"
@@ -97,7 +96,7 @@
                         </button>
                         <form class="header__form js-form" action="/">
                             <input class="header__input" type="text" name="searh" placeholder="Поиск по сайту">
-                            <button class="header__input-btn" type="submit">
+                            <button class="header__input-btn" type="submit" aria-label="Поиск">
                                 <svg class="header__input-icon" width="23" height="22" viewBox="0 0 23 22" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect width="6.8678" height="1.71695"
@@ -108,7 +107,7 @@
                                         fill="white" />
                                 </svg>
                             </button>
-                            <button class="header__search-btn-close js-close-search" type="button">
+                            <button class="header__search-btn-close js-close-search" type="button" aria-label="Закрыть">
                                 <svg class="header__search-close-icon" width="23" height="23" viewBox="0 0 29 29"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.63635" width="37.2838" height="3.72838" transform="rotate(45 2.63635 0)"
@@ -426,10 +425,8 @@
                                 </a>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
             <div class="gallery__last">
                 <div class="gallery__last-content">
@@ -453,7 +450,7 @@
                     которые жаждут быть функционально разнесены на независимые элементы.
                 </p>
                 <div class="catalog__content">
-                    <div class="catalog__tab catalog__tab-active" data-target="six">
+                    <div class="catalog__tab" data-target="six">
                         <img src="img/Painter.jpg" class="catalog__tab-img" alt="">
                         <h3 class="catalog__tab-title">Что мы о нём знаем?</h3>
                         <p class="catalog__tab-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
@@ -461,7 +458,7 @@
                         </p>
                         <a href="#gallery" class="catalog__link" aria-label="В галерею">В галерею</a>
                     </div>
-                    <div class="catalog__tab" data-target="seven">
+                    <div class="catalog__tab catalog__tab-active" data-target="seven">
                         <img src="img/Domenico.jpg" class="catalog__tab-img" alt="">
                         <h3 class="catalog__tab-title">Доменико Гирландайо</h3>
                         <span class="catalog__tab-descr">2 июня 1448 — 11 января 1494.</span>
@@ -476,21 +473,15 @@
                     <div class="catalog__accordion">
                         <ul id="accordion">
                             <li class="catalog__item">
-                                <div class="catalog__item-content">
-                                    <div class="catalog__accordion-content">
-                                        <button class="catalog__accordion-btn">C 1400 по 1499 гг.</button>
-                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="catalog__icon-round"
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                fill="#ECECEC" />
-                                            <path
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                stroke="black" />
-                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                                        </svg>
-                                    </div>
-                                </div>
+                                <h3 class="catalog__item-content">
+                                    <span class="catalog__item-text">
+                                        <span class="catalog__item-text-content">C 1400 по 1499 гг.</span>
+                                    </span>
+                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="catalog__icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                                        <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                                      </svg>
+                                </h3>
                                 <ul class="catalog__item-list">
                                     <li class="catalog__list-item"><button class="catalog__item-btn btn-reset"
                                             aria-label="Бенедетто ди Биндо" data-path="six">Бенедетто ди
@@ -560,21 +551,15 @@
                                 </ul>
                             </li>
                             <li class="catalog__item">
-                                <div class="catalog__item-content">
-                                    <div class="catalog__accordion-content">
-                                        <button class="catalog__accordion-btn">C 1500 по 1599 гг.</button>
-                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="catalog__icon-round"
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                fill="#ECECEC" />
-                                            <path
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                stroke="black" />
-                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                                        </svg>
-                                    </div>
-                                </div>
+                                <h3 class="catalog__item-content">
+                                    <span class="catalog__item-text">
+                                        <span class="catalog__item-text-content">C 1500 по 1599 гг.</span>
+                                    </span>
+                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="catalog__icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                                        <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                                      </svg>
+                                </h3>
                                 <div class="catalog__item-link-content">
                                     <div class="catalog__item-description">
                                         <img src="img/catalog-accordion.svg" class="catalog__item-img" alt="">
@@ -590,21 +575,15 @@
                                 </div>
                             </li>
                             <li class="catalog__item">
-                                <div class="catalog__item-content">
-                                    <div class="catalog__accordion-content">
-                                        <button class="catalog__accordion-btn">C 1600 по 1699 гг.</button>
-                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="catalog__icon-round"
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                fill="#ECECEC" />
-                                            <path
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                stroke="black" />
-                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                                        </svg>
-                                    </div>
-                                </div>
+                                <h3 class="catalog__item-content">
+                                    <span class="catalog__item-text">
+                                        <span class="catalog__item-text-content">C 1600 по 1699 гг.</span>
+                                    </span>
+                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="catalog__icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                                        <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                                      </svg>
+                                </h3>
                                 <div class="catalog__item-link-content">
                                     <div class="catalog__item-description">
                                         <img src="img/catalog-accordion.svg" class="catalog__item-img" alt="">
@@ -620,21 +599,15 @@
                                 </div>
                             </li>
                             <li class="catalog__item">
-                                <div class="catalog__item-content">
-                                    <div class="catalog__accordion-content">
-                                        <button class="catalog__accordion-btn is-active">C 1700 по 1799 гг.</button>
-                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="catalog__icon-round"
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                fill="#ECECEC" />
-                                            <path
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                stroke="black" />
-                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                                        </svg>
-                                    </div>
-                                </div>
+                                <h3 class="catalog__item-content">
+                                    <span class="catalog__item-text">
+                                        <span class="catalog__item-text-content">C 1700 по 1799 гг.</span>
+                                    </span>
+                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="catalog__icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                                        <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                                      </svg>
+                                </h3>
                                 <div class="catalog__item-link-content">
                                     <div class="catalog__item-description">
                                         <img src="img/catalog-accordion.svg" class="catalog__item-img" alt="">
@@ -650,21 +623,15 @@
                                 </div>
                             </li>
                             <li class="catalog__item">
-                                <div class="catalog__item-content">
-                                    <div class="catalog__accordion-content">
-                                        <button class="catalog__accordion-btn">C 1800 по 1899 гг.</button>
-                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="catalog__icon-round"
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                fill="#ECECEC" />
-                                            <path
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                stroke="black" />
-                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                                        </svg>
-                                    </div>
-                                </div>
+                                <h3 class="catalog__item-content">
+                                    <span class="catalog__item-text">
+                                        <span class="catalog__item-text-content">C 1800 по 1899 гг.</span>
+                                    </span>
+                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="catalog__icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                                        <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                                      </svg>
+                                </h3>
                                 <div class="catalog__item-link-content">
                                     <div class="catalog__item-description">
                                         <img src="img/catalog-accordion.svg" class="catalog__item-img" alt="">
@@ -680,21 +647,15 @@
                                 </div>
                             </li>
                             <li class="catalog__item">
-                                <div class="catalog__item-content">
-                                    <div class="catalog__accordion-content">
-                                        <button class="catalog__accordion-btn">C 1900 по 1999 гг.</button>
-                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="catalog__icon-round"
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                fill="#ECECEC" />
-                                            <path
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                stroke="black" />
-                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                                        </svg>
-                                    </div>
-                                </div>
+                                <h3 class="catalog__item-content">
+                                    <span class="catalog__item-text">
+                                        <span class="catalog__item-text-content">C 1900 по 1999 гг.</span>
+                                    </span>
+                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="catalog__icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                                        <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                                      </svg>
+                                </h3>
                                 <div class="catalog__item-link-content">
                                     <div class="catalog__item-description">
                                         <img src="img/catalog-accordion.svg" class="catalog__item-img" alt="">
@@ -710,21 +671,15 @@
                                 </div>
                             </li>
                             <li class="catalog__item">
-                                <div class="catalog__item-content">
-                                    <div class="catalog__accordion-content">
-                                        <button class="catalog__accordion-btn">C 2000 г.</button>
-                                        <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="catalog__icon-round"
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                fill="#ECECEC" />
-                                            <path
-                                                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                                                stroke="black" />
-                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                                        </svg>
-                                    </div>
-                                </div>
+                                <h3 class="catalog__item-content">
+                                    <span class="catalog__item-text">
+                                        <span class="catalog__item-text-content">C 2000 г.</span>
+                                    </span>
+                                    <svg class="catalog__item-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="catalog__icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                                        <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                                      </svg>
+                                </h3>
                                 <div class="catalog__item-link-content">
                                     <div class="catalog__item-description">
                                         <img src="img/catalog-accordion.svg" class="catalog__item-img" alt="">
@@ -755,13 +710,13 @@
                             <div class="developments__item">
                                 <picture>
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-320.jpg"
-                                        media="(max-width: 610px)">
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-one-1024.jpg"
+                                        media="(max-width: 420px)">
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-one-768.jpg"
                                         media="(max-width: 970px)">
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-one-1024.jpg"
                                         media="(max-width: 1024px)">
                                     <img src="img/developments-one.jpg" class="developments__item-img" alt="Книжная гравюра">
                                 </picture>
@@ -771,19 +726,19 @@
                                         <p class="developments__item-text">Один из ведущих флорентийских художников
                                             Кватроченто, основатель художественной династии, которую продолжили его брат
                                             Давид и сын Ридольфо.</p>
-                                        <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                        <a href="#" class="developments__item-link" aria-label="Подробнее"><span class="developments__item-link-text">Подробнее</span></a>
                                     </div>
                             </div>
                             <div class="developments__item">
                                 <picture>
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-320.jpg"
-                                        media="(max-width: 610px)">
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-two-1024.jpg"
+                                        media="(max-width: 420px)">
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-two-768.jpg"
                                         media="(max-width: 970px)">
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-two-1024.jpg"
                                         media="(max-width: 1024px)">
                                     <img src="img/developments-two.jpg" class="developments__item-img" alt="«Открытая дискуссия»">
                                 </picture>
@@ -793,19 +748,19 @@
                                             Ильин.</h3>
                                         <p class="developments__item-text">Высокий уровень вовлечения представителей целевой
                                             аудитории является четким доказательством простого факта.</p>
-                                        <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                        <a href="#" class="developments__item-link" aria-label="Подробнее"><span class="developments__item-link-text">Подробнее</span></a>
                                     </div>
                             </div>
                             <div class="developments__item">
                                 <picture>
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-320.jpg"
-                                        media="(max-width: 610px)">
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-three-1024.jpg"
+                                        media="(max-width: 420px)">
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-three-768.jpg"
                                         media="(max-width: 970px)">
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-three-1024.jpg"
                                         media="(max-width: 1024px)">
                                     <img src="img/developments-three.jpg" class="developments__item-img" alt="Выставка «Формация 2020»">
                                 </picture>
@@ -815,19 +770,19 @@
                                     <p class="developments__item-text">Идейные соображения высшего порядка, а также
                                         современная методология разработки играет важную роль в формировании
                                         глубокомысленных рассуждений.</p>
-                                    <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                    <a href="#" class="developments__item-link" aria-label="Подробнее"><span class="developments__item-link-text">Подробнее</span></a>
                                 </div>
                             </div>
                             <div class="developments__item">
                                 <picture>
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-320.jpg"
-                                        media="(max-width: 610px)">
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-four-1024.jpg"
+                                        media="(max-width: 420px)">
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-four-768.jpg"
                                         media="(max-width: 970px)">
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-four-1024.jpg"
                                         media="(max-width: 1024px)">
                                     <img src="img/developments-four.jpg" class="developments__item-img" alt="Молодое искусство">
                                 </picture>
@@ -838,19 +793,19 @@
                                         </h3>
                                         <p class="developments__item-text">Внезапно, реплицированные с зарубежных
                                             источников, современные исследования.</p>
-                                        <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                        <a href="#" class="developments__item-link" aria-label="Подробнее"><span class="developments__item-link-text">Подробнее</span></a>
                                     </div>
                             </div>
                             <div class="developments__item">
                                 <picture>
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-320.jpg"
-                                        media="(max-width: 610px)">
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-five-1024.jpg"
+                                        media="(max-width: 420px)">
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-five-768.jpg"
                                         media="(max-width: 970px)">
                                     <source
-                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/gallery-one-768.jpg"
+                                        srcset="https://raw.githubusercontent.com/DenMironov/weblayout/main/img/developments-five-1024.jpg"
                                         media="(max-width: 1024px)">
                                     <img src="img/developments-five.jpg" class="developments__item-img" alt="Метафора серебра">
                                 </picture>
@@ -861,7 +816,7 @@
                                         <p class="developments__item-text">Один из ведущих флорентийских художников
                                             Кватроченто, основатель художественной династии, которую продолжили его брат
                                             Давид и сын Ридольфо.</p>
-                                        <a href="#" class="developments__item-link" aria-label="Подробнее">Подробнее</a>
+                                        <a href="#" class="developments__item-link" aria-label="Подробнее"><span class="developments__item-link-text">Подробнее</span></a>
                                     </div>
                             </div>
                         </div>
@@ -1093,7 +1048,7 @@
                     предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных
                     резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не
                     уникальными данными до степени совершенной неузнаваемости. Подробнее:
-                    <a href="#" class="projects__text-link">blanchard-&nbsp;art.ru/projects/about</a>
+                    <a href="#" class="projects__text-link"><span class="projects__text-link-text">blanchard-&nbsp;art.ru/projects/about</span></a>
                 </p>
                 <h3 class="projects__title-partners">Партнёры проектов:</h3>
                 <div class="projects__swiper-container">
@@ -1101,32 +1056,32 @@
                         aria-label="К предыдущему слайду"></button>
                     <div class="projects__swiper">
                         <div class="swiper-wrapper">
-                            <a href="#" class="swiper-slide projects__item-link">
-                                <img class="projects__item-img" src="img/partner-freelands.png" alt="">
+                            <a href="#" class="swiper-slide projects__item-link" aria-label="freelands">
+                                <img class="projects__item-img" src="img/partner-freelands.png" alt="partner-freelands">
                             </a>
-                            <a href="#" class="swiper-slide projects__item-link">
-                                <img class="projects__item-img" src="img/partner-institute.png" alt="">
+                            <a href="#" class="swiper-slide projects__item-link" aria-label="institute">
+                                <img class="projects__item-img" src="img/partner-institute.png" alt="partner-institute">
                             </a>
-                            <a href="#" class="swiper-slide projects__item-link">
-                                <img class="projects__item-img" src="img/partner-workhouse.png" alt="">
+                            <a href="#" class="swiper-slide projects__item-link" aria-label="workhouse">
+                                <img class="projects__item-img" src="img/partner-workhouse.png" alt="partner-workhouse">
                             </a>
-                            <a href="#" class="swiper-slide projects__item-link">
-                                <img class="projects__item-img" src="img/partner-1849.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link" aria-label="1849">
+                                <img class="projects__item-img" src="img/partner-1849.png" alt="partner-1849">
                             </a>
-                            <a href="#" class="swiper-slide projects__item-link">
-                                <img class="projects__item-img" src="img/partner-hiscox.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link" aria-label="hiscox">
+                                <img class="projects__item-img" src="img/partner-hiscox.png" alt="partner-hiscox">
                             </a>
-                            <a href="#" class="swiper-slide projects__item-link">
-                                <img class="projects__item-img" src="img/partner-camden.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link" aria-label="camden">
+                                <img class="projects__item-img" src="img/partner-camden.png" alt="partner-camden">
                             </a>
-                            <a href="#" class="swiper-slide projects__item-link">
-                                <img class="projects__item-img" src="img/partner-stassen.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link" aria-label="stassen">
+                                <img class="projects__item-img" src="img/partner-stassen.png" alt="partner-stassen">
                             </a>
-                            <a href="#" class="swiper-slide projects__item-link">
-                                <img class="projects__item-img" src="img/partner-watts.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link" aria-label="watts">
+                                <img class="projects__item-img" src="img/partner-watts.png" alt="partner-watts">
                             </a>
-                            <a href="#" class="swiper-slide projects__item-link">
-                                <img class="projects__item-img" src="img/partner-esad.png" alt="Партнёр">
+                            <a href="#" class="swiper-slide projects__item-link" aria-label="esad">
+                                <img class="projects__item-img" src="img/partner-esad.png" alt="partner-esad">
                             </a>
                         </div>
                     </div>
@@ -1140,10 +1095,17 @@
         <div class="container">
             <h2 class="contacts__title" id="contacts">Контакты</h2>
         </div>
-        <div class="contacts__container">
-            <div class="contacts__left">
+        <div class="contacts__content">
+        <div class="container contacts__container">
+            <div class="contacts__top-mobile">
                 <h3 class="contacts__left-title">Шоурум №4</h3>
                 <p class="contacts__left-adress">Леонтьевский переулок, дом 5/1</p>
+            </div>
+            <div class="contacts__left">
+                <div class="contacts__top-desktop">
+                    <h3 class="contacts__left-title">Шоурум №4</h3>
+                    <p class="contacts__left-adress">Леонтьевский переулок, дом 5/1</p>
+                </div>
                 <form action="mail.php" enctype="multipart/form-data" method="POST" class="contacts__form">
                     <input type="hidden" name="admin_email[]" value="dspatm131@mail.ru">
                     <h3 class="contacts__form-title">Заказать обратный звонок</h3>
@@ -1192,8 +1154,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="contacts__right" id="map" style="width: 100%; max-height: 700px"></div>
+            <div class="contacts__right" id="map"></div>
         </div>
+    </div>
     </section>
 
     <footer class="footer">

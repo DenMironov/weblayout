@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 $(function () {
-  $("#accordion").accordion({ active: false, collapsible: true }, { heightStyle: "content" });
+  $("#accordion").accordion({ active: 0, collapsible: true, icons: false }, { heightStyle: "content" });
 });
 
 //EDITIONS//
@@ -269,7 +269,7 @@ document.querySelector('.editions__checkbox-btn').addEventListener('click', func
 
 document.addEventListener('DOMContentLoaded', () => {
   (() => {
-const MOBILE_WIDTH = 420;
+const MOBILE_WIDTH = 610;
 
 const sliderParamsNotMobile = {
   sliderWrap: "editions__slider-wrap",
@@ -320,12 +320,7 @@ function activateSlider(params) {
 
   params.cardsSlider = new Swiper(`.${params.cardsContainerName}`, {
     breakpoints: {
-      421: {
-        slidesPerGroup: 2,
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      641: {
+      611: {
         slidesPerGroup: 2,
         slidesPerView: 2,
         spaceBetween: 7,
@@ -416,7 +411,7 @@ window.addEventListener("resize", function () {
 //DEVELOPMENTS//
 
 (() => {
-  const MOBILE_WIDTH = 640;
+  const MOBILE_WIDTH = 610;
   const DESKTOP_WIDTH = 970;
   const btn = document.querySelector(".developments__btn");
 
